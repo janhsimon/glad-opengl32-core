@@ -1,2 +1,11 @@
-add_library(glad STATIC "src/glad.c" "include/glad/glad.h" "include/KHR/khrplatform.h")
-include_directories("include")
+set(HEADER_FILES
+  include/glad/glad.h
+  include/KHR/khrplatform.h
+)
+
+set(SOURCE_FILES
+  src/glad.c
+)
+
+add_library(glad STATIC ${HEADER_FILES} ${SOURCE_FILES})
+include_directories(include)
