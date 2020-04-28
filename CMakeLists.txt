@@ -8,4 +8,4 @@ set(SOURCE_FILES
 )
 
 add_library(glad STATIC ${HEADER_FILES} ${SOURCE_FILES})
-include_directories(include)
+target_include_directories(glad PUBLIC include)
